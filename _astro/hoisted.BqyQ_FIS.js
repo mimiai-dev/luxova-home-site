@@ -1,0 +1,1 @@
+import"./hoisted.hMI5plOY.js";import"./hoisted.viY2q2bE.js";const s=document.getElementById("gallery-main"),c=Array.from(document.querySelectorAll(".thumb"));for(const t of c)t.addEventListener("click",()=>{const e=t.getAttribute("data-src");e&&s&&(s.src=e);for(const o of c)o.classList.remove("is-active");t.classList.add("is-active")});
