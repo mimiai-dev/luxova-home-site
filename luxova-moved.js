@@ -107,6 +107,11 @@
     root.appendChild(veil)
     document.body.appendChild(host)
     try { go.focus() } catch (e) { /* focus is a nicety */ }
+
+    // Owner's ask 2026-10-10: this domain should redirect to the new one. The
+    // notice shows for a moment (and stays as the fallback if script
+    // navigation is blocked), then the visitor is sent on, same path and query.
+    setTimeout(function () { try { location.replace(go.href) } catch (e) { /* the link is still there */ } }, 2500)
   }
 
   if (document.body) build()
